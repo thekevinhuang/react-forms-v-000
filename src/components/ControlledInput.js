@@ -7,7 +7,17 @@ export default class Form extends Component {
     lastName: "Henry"
   }
 
+  handleFirstNameChange = (event) => {
+    this.setState({
+      firstName: event.target.value
+    })
+  }
 
+  handleLastNameChange = (event) => {
+    this.setState({
+      secondState: event.target.value
+    })
+  }
 
   render() {
     return (
