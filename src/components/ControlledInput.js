@@ -7,23 +7,17 @@ export default class Form extends Component {
     lastName: "Henry"
   }
 
-  handleFirstNameChange = (event) => {
+  handleChange = (event) => {
     this.setState({
-      firstName: event.target.value
-    })
-  }
-
-  handleLastNameChange = (event) => {
-    this.setState({
-      secondState: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
   render() {
     return (
       <form>
-        <input type="text" name="firstName" onChange={this.handleFirstNameChange} value={this.state.firstName} />
-        <input type="text" name="lastName" onChange={this.handleLastNameChange} value={this.state.LastName} />
+        <input type="text" name="firstName" onChange={this.handleChange} value={this.state.firstName} />
+        <input type="text" name="lastName" onChange={this.handleChange} value={this.state.LastName} />
       </form>
     )
   }
