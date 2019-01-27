@@ -7,11 +7,13 @@ export default class Form extends Component {
     lastName: "Henry"
   }
 
+  
+
   render() {
     return (
       <form>
-        <input type="text" name="firstName" value={this.state.firstName} />
-        <input type="text" name="lastName" value={this.state.LastName} />
+        <input type="text" name="firstName" onChange={this.handleFirstNameChange} value={this.state.firstName} />
+        <input type="text" name="lastName" onChange={this.handleLastNameChange} value={this.state.LastName} />
       </form>
     )
   }
